@@ -23,7 +23,7 @@ import {
   PackageOpen,
   Award,
 } from 'lucide-react';
-
+const ASSET_BASE = `${import.meta.env.BASE_URL}assets/`;
 const links = {
   email: 'mailto:pravalikasure@gmail.com',
   linkedin: 'https://www.linkedin.com/in/pravalika-sure-abbb661ba/',
@@ -46,18 +46,17 @@ const featuredProject = {
     'Supplier Workflow Design', 'Authentication Planning', 'UI/UX Design', 'Business Systems Thinking'
   ]
 };
-
 const projectScreens = [
-  { src: '/assets/liquor-login.png', alt: 'Liquor app login page' },
-  { src: '/assets/liquor-dashboard.png', alt: 'Liquor app dashboard' },
-  { src: '/assets/liquor-inventory.png', alt: 'Liquor app inventory page' },
-  { src: '/assets/liquor-sales.png', alt: 'Liquor app sales page' },
-  { src: '/assets/liquor-expenses.png', alt: 'Liquor app expenses page' },
-  { src: '/assets/liquor-analytics.png', alt: 'Liquor app analytics page' },
-  { src: '/assets/liquor-seasonal.png', alt: 'Liquor app seasonal page' },
-  { src: '/assets/liquor-alerts.png', alt: 'Liquor app stock alerts page' },
-  { src: '/assets/liquor-deals.png', alt: 'Liquor app supplier deals page' },
-  { src: '/assets/liquor-settings.png', alt: 'Liquor app settings page' }
+  { src: `${ASSET_BASE}liquor-login.png`, alt: 'Liquor app login page' },
+  { src: `${ASSET_BASE}liquor-dashboard.png`, alt: 'Liquor app dashboard' },
+  { src: `${ASSET_BASE}liquor-inventory.png`, alt: 'Liquor app inventory page' },
+  { src: `${ASSET_BASE}liquor-sales.png`, alt: 'Liquor app sales page' },
+  { src: `${ASSET_BASE}liquor-expenses.png`, alt: 'Liquor app expenses page' },
+  { src: `${ASSET_BASE}liquor-analytics.png`, alt: 'Liquor app analytics page' },
+  { src: `${ASSET_BASE}liquor-seasonal.png`, alt: 'Liquor app seasonal page' },
+  { src: `${ASSET_BASE}liquor-alerts.png`, alt: 'Liquor app stock alerts page' },
+  { src: `${ASSET_BASE}liquor-deals.png`, alt: 'Liquor app supplier deals page' },
+  { src: `${ASSET_BASE}liquor-settings.png`, alt: 'Liquor app settings page' }
 ];
 
 const otherProjects = [
@@ -107,14 +106,14 @@ const certifications = [
     title: 'Amazon ML Summer School',
     detail: 'Attended a competitive program covering supervised learning, deep neural networks, dimensionality reduction, unsupervised learning, causal inference, and reinforcement learning.',
     status: 'Completed',
-    image: '/assets/amazon-ml-school.jpg',
+    image: `${ASSET_BASE}amazon-ml-school.jpg',
     skills: ['Machine Learning', 'Deep Learning', 'Causal Inference', 'Reinforcement Learning']
   },
   {
     title: 'McKinsey Forward Program',
     detail: 'Completed a structured global learning program centered on problem solving, communication, adaptability, and business decision-making.',
     status: 'Completed',
-    image: '/assets/mckinsey-forward.jpg',
+    image: '${ASSET_BASE}mckinsey-forward.jpg',
     skills: ['Structured Thinking', 'Communication', 'Business Strategy', 'Professional Development']
   }
 ];
@@ -197,7 +196,7 @@ function Hero() {
 
         <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="hero-portrait-only">
           <div className="portrait-card card refined-portrait">
-            <img src="/assets/pravalika-sun.jpg" alt="Pravalika portrait" className="hero-photo refined-photo" />
+            <img src={`${ASSET_BASE}pravalika-sun.jpg`} alt="Pravalika portrait" className="hero-photo refined-photo" />
           </div>
         </motion.div>
       </div>
@@ -375,7 +374,7 @@ function EducationSection() {
         <div className="project-grid two-up">
           <article className="card edu-card premium">
             <div className="edu-row">
-              <div className="edu-logo-wrap"><img src="/assets/umd.png" alt="University of Maryland logo" className="edu-logo" /></div>
+              <div className="edu-logo-wrap"><img src={`${ASSET_BASE}umd.png`} alt="University of Maryland logo" className="edu-logo" /></div>
               <div>
                 <h3>University of Maryland, College Park</h3>
                 <p className="subtle">Master of Science in Data Science</p>
@@ -385,7 +384,7 @@ function EducationSection() {
           </article>
           <article className="card edu-card premium">
             <div className="edu-row">
-              <div className="edu-logo-wrap"><img src="/assets/vnr.png" alt="VNR VJIET logo" className="edu-logo" /></div>
+              <div className="edu-logo-wrap"><img src={`${ASSET_BASE}vnr.png`}   alt="VNR VJIET logo" className="edu-logo" /></div>
               <div>
                 <h3>VNR VJIET</h3>
                 <p className="subtle">Bachelor of Technology in Computer Science and Engineering</p>
