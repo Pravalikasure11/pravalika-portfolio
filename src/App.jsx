@@ -23,77 +23,27 @@ import {
   PackageOpen,
   Award,
 } from 'lucide-react';
-const ASSET_BASE = `${import.meta.env.BASE_URL}assets/`;
+const ASSET_BASE = import.meta.env.BASE_URL + 'assets/';
+
 const links = {
   email: 'mailto:pravalikasure@gmail.com',
   linkedin: 'https://www.linkedin.com/in/pravalika-sure-abbb661ba/',
   github: 'https://github.com/Pravalikasure11',
-  resume: '/Pravalika_Sure_HP_BusinessPlanning.pdf',
+  resume: import.meta.env.BASE_URL + 'assets/Pravalika_Sure_HP_BusinessPlanning.pdf',
 };
 
-const featuredProject = {
-  title: 'Smart Liquor Store POS & Analytics System',
-  subtitle:
-    'A full-stack retail operations system built for inventory, sales, profitability, seasonal insights, supplier deal visibility, and secure business workflows.',
-  stack: ['FastAPI', 'React', 'PostgreSQL', 'SQLAlchemy', 'Power BI', 'JWT Auth', 'MFA-Ready Security', 'Vite'],
-  bullets: [
-    'Designed and deployed a multi-page liquor store platform integrating POS, inventory management, sales tracking, expense monitoring, alerts, supplier deal workflows, and settings.',
-    'Built revenue, profit, stock health, and seasonal analytics experiences to help operators understand what is selling, what needs reordering, and where profitability is changing.',
-    'Structured the product for secure authentication, role-based access, future supplier portal automation, and embedded analytics architecture using Power BI.'
-  ],
-  skills: [
-    'Full-Stack Development', 'Retail Product Design', 'Inventory Analytics', 'Sales Analytics', 'Pricing Logic',
-    'Supplier Workflow Design', 'Authentication Planning', 'UI/UX Design', 'Business Systems Thinking'
-  ]
-};
 const projectScreens = [
-  { src: `${ASSET_BASE}liquor-login.png`, alt: 'Liquor app login page' },
-  { src: `${ASSET_BASE}liquor-dashboard.png`, alt: 'Liquor app dashboard' },
-  { src: `${ASSET_BASE}liquor-inventory.png`, alt: 'Liquor app inventory page' },
-  { src: `${ASSET_BASE}liquor-sales.png`, alt: 'Liquor app sales page' },
-  { src: `${ASSET_BASE}liquor-expenses.png`, alt: 'Liquor app expenses page' },
-  { src: `${ASSET_BASE}liquor-analytics.png`, alt: 'Liquor app analytics page' },
-  { src: `${ASSET_BASE}liquor-seasonal.png`, alt: 'Liquor app seasonal page' },
-  { src: `${ASSET_BASE}liquor-alerts.png`, alt: 'Liquor app stock alerts page' },
-  { src: `${ASSET_BASE}liquor-deals.png`, alt: 'Liquor app supplier deals page' },
-  { src: `${ASSET_BASE}liquor-settings.png`, alt: 'Liquor app settings page' }
+  { src: ASSET_BASE + 'liquor-login.png', alt: 'Liquor app login page' },
+  { src: ASSET_BASE + 'liquor-dashboard.png', alt: 'Liquor app dashboard' },
+  { src: ASSET_BASE + 'liquor-inventory.png', alt: 'Liquor app inventory page' },
+  { src: ASSET_BASE + 'liquor-sales.png', alt: 'Liquor app sales page' },
+  { src: ASSET_BASE + 'liquor-expenses.png', alt: 'Liquor app expenses page' },
+  { src: ASSET_BASE + 'liquor-analytics.png', alt: 'Liquor app analytics page' },
+  { src: ASSET_BASE + 'liquor-seasonal.png', alt: 'Liquor app seasonal page' },
+  { src: ASSET_BASE + 'liquor-alerts.png', alt: 'Liquor app stock alerts page' },
+  { src: ASSET_BASE + 'liquor-deals.png', alt: 'Liquor app supplier deals page' },
+  { src: ASSET_BASE + 'liquor-settings.png', alt: 'Liquor app settings page' }
 ];
-
-const otherProjects = [
-  {
-    title: 'Demand Planning & Forecast Accuracy System',
-    description: 'Built forecasting and revenue reporting workflows with variance tracking, MAPE-based evaluation, and business-facing summaries for decision support.',
-    skills: ['Python', 'SQL', 'Power BI', 'Excel', 'R', 'Forecasting', 'MAPE', 'Revenue Analytics'],
-    repo: 'https://github.com/Pravalikasure11'
-  },
-  {
-    title: 'Inventory Risk & Optimization Analytics',
-    description: 'Designed KPI-driven analytics for margin tracking, inventory performance, and revenue visibility across multi-SKU business scenarios.',
-    skills: ['Python', 'SQL', 'Power BI', 'DAX', 'KPI Design', 'Margin Analysis', 'Inventory Analytics'],
-    repo: 'https://github.com/Pravalikasure11'
-  },
-  {
-    title: 'Public Health Guidance Copilot',
-    description: 'Conceptualized a deterministic retrieval-and-response assistant for structured public-health guidance and grounded evidence delivery.',
-    skills: ['Python', 'RAG', 'Prompt Design', 'Streamlit', 'Decision Support'],
-    repo: 'https://github.com/Pravalikasure11'
-  }
-];
-
-const strengthCards = [
-  { icon: BarChart3, title: 'Analytics Systems', text: 'Built dashboards, reporting workflows, forecasting systems, and business-facing KPI layers.' },
-  { icon: BrainCircuit, title: 'Product Thinking', text: 'Designed systems around real operational workflows, data flow, and decision support.' },
-  { icon: ShieldCheck, title: 'Security Mindset', text: 'Structured apps with secure authentication, role-aware access, and production-style architecture.' },
-  { icon: Briefcase, title: 'Business Impact', text: 'Focused on margin, inventory, revenue visibility, seasonal demand, and supplier intelligence.' },
-];
-
-const skills = {
-  'Programming & Querying': ['Python', 'SQL', 'JavaScript', 'TypeScript', 'R'],
-  'Frameworks & Engineering': ['FastAPI', 'React', 'SQLAlchemy', 'REST APIs', 'Vite', 'Authentication Flows'],
-  'Analytics & BI': ['Power BI', 'DAX', 'Forecasting', 'KPI Reporting', 'Financial Modeling', 'Seasonal Analysis', 'Margin Analysis'],
-  'Data & Platforms': ['PostgreSQL', 'SQLite', 'Git', 'Docker', 'Excel', 'Power Query'],
-  'Business & Communication': ['Business Planning', 'Market Research', 'Stakeholder Communication', 'Revenue Reporting', 'Problem Solving']
-};
 
 const certifications = [
   {
@@ -106,14 +56,14 @@ const certifications = [
     title: 'Amazon ML Summer School',
     detail: 'Attended a competitive program covering supervised learning, deep neural networks, dimensionality reduction, unsupervised learning, causal inference, and reinforcement learning.',
     status: 'Completed',
-    image: `${ASSET_BASE}amazon-ml-school.jpg',
+    image: ASSET_BASE + 'amazon-ml-school.jpeg',
     skills: ['Machine Learning', 'Deep Learning', 'Causal Inference', 'Reinforcement Learning']
   },
   {
     title: 'McKinsey Forward Program',
     detail: 'Completed a structured global learning program centered on problem solving, communication, adaptability, and business decision-making.',
     status: 'Completed',
-    image: '${ASSET_BASE}mckinsey-forward.jpg',
+    image: ASSET_BASE + 'mckinsey-forward.jpeg',
     skills: ['Structured Thinking', 'Communication', 'Business Strategy', 'Professional Development']
   }
 ];
@@ -196,7 +146,7 @@ function Hero() {
 
         <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="hero-portrait-only">
           <div className="portrait-card card refined-portrait">
-            <img src={`${ASSET_BASE}pravalika-sun.jpg`} alt="Pravalika portrait" className="hero-photo refined-photo" />
+            <img src={ASSET_BASE + 'pravalika-sun.png'} alt="Pravalika portrait" className="hero-photo refined-photo" />
           </div>
         </motion.div>
       </div>
@@ -374,7 +324,7 @@ function EducationSection() {
         <div className="project-grid two-up">
           <article className="card edu-card premium">
             <div className="edu-row">
-              <div className="edu-logo-wrap"><img src={`${ASSET_BASE}umd.png`} alt="University of Maryland logo" className="edu-logo" /></div>
+              <div className="edu-logo-wrap"><img src={ASSET_BASE + 'umd.png'} alt="University of Maryland logo" className="edu-logo" /></div>
               <div>
                 <h3>University of Maryland, College Park</h3>
                 <p className="subtle">Master of Science in Data Science</p>
@@ -384,7 +334,7 @@ function EducationSection() {
           </article>
           <article className="card edu-card premium">
             <div className="edu-row">
-              <div className="edu-logo-wrap"><img src={`${ASSET_BASE}vnr.png`}   alt="VNR VJIET logo" className="edu-logo" /></div>
+              <div className="edu-logo-wrap"><img src={ASSET_BASE + 'vnr.png'} alt="VNR VJIET logo" className="edu-logo" /></div>
               <div>
                 <h3>VNR VJIET</h3>
                 <p className="subtle">Bachelor of Technology in Computer Science and Engineering</p>
