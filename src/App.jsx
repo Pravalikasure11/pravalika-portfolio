@@ -142,7 +142,7 @@ const certifications = [
     detail:
       'Attended a competitive program covering supervised learning, deep neural networks, dimensionality reduction, unsupervised learning, causal inference, and reinforcement learning.',
     status: 'Completed',
-    image: ASSET_BASE + 'amazon-ml-school.jpeg',
+    image: ASSET_BASE + 'amazon-ml-school.jpe',
     skills: ['Machine Learning', 'Deep Learning', 'Causal Inference', 'Reinforcement Learning'],
   },
   {
@@ -150,7 +150,7 @@ const certifications = [
     detail:
       'Completed a structured global learning program centered on problem solving, communication, adaptability, and business decision-making.',
     status: 'Completed',
-    image: ASSET_BASE + 'mckinsey-forward.jpeg',
+    image: ASSET_BASE + 'mckinsey-forward.jpg',
     skills: ['Structured Thinking', 'Communication', 'Business Strategy', 'Professional Development'],
   },
 ];
@@ -244,7 +244,7 @@ function Hero() {
           className="hero-portrait-only"
         >
           <div className="portrait-card card refined-portrait">
-            <img src={ASSET_BASE + 'pravalika-sun.png'} alt="Pravalika portrait" className="hero-photo refined-photo" />
+            <img src={ASSET_BASE + 'pravalika-sun.jpg'} alt="Pravalika portrait" className="hero-photo refined-photo" />
           </div>
         </motion.div>
       </div>
