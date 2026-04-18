@@ -141,3 +141,29 @@ button { font: inherit; }
 .story-card p {
   margin-bottom: 18px;
 }
+.story-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.story-text {
+  line-height: 1.9;
+}
+
+.story-image img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+  .story-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .story-image {
+    order: -1;
+  }
+}
