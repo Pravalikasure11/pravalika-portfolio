@@ -123,3 +123,14 @@ button { font: inherit; }
   .btn { width: 100%; }
   .edu-row { align-items: flex-start; }
 }
+.story-card {
+  max-width: 820px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.story-card p {
+  margin-bottom: 16px;
+  color: #cfcfcf;
+}

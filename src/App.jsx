@@ -512,6 +512,53 @@ function EducationSection() {
   );
 }
 
+function StorySection() {
+  return (
+    <section className="section-shell bordered">
+      <div className="container">
+        <SectionHeading
+          eyebrow="My Story"
+          title="Why data became personal to me"
+          subtitle="A real-world business problem that shaped how I think about data, systems, and decision-making."
+        />
+
+        <div className="card premium story-card">
+          <p>
+            My curiosity about data started at home, through my father’s logistics business in India.
+            Like many small and medium businesses, operations depended heavily on Excel sheets,
+            paper records, and manual tracking.
+          </p>
+
+          <p>
+            During busy periods, especially around accounting and profit-sharing, I helped organize
+            large amounts of business data. That’s when I began wondering — why isn’t there a system
+            where everything is easily visible? Profits, losses, margins, shipment details,
+            and operational performance — all in one place.
+          </p>
+
+          <p>
+            I saw how difficult it was to answer important questions quickly:
+            Which stations are performing well? Where are margins dropping?
+            How do we track lost or misplaced shipments? How can decisions like pricing or expansion
+            be made with confidence?
+          </p>
+
+          <p>
+            As the business grew, these challenges became even more visible. Information was often
+            delayed, scattered, and hard to retrieve when it was needed most.
+          </p>
+
+          <p>
+            That experience shaped how I think about data today. For me, data is not just analysis —
+            it’s about building systems that bring clarity, improve transparency, and help businesses
+            make better decisions.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ContactSection() {
   return (
     <section id="contact" className="section-shell bordered bottom-space">
@@ -543,6 +590,7 @@ export default function App() {
         <CertificationsSection />
         <AchievementsSection />
         <EducationSection />
+        <StorySection />  
         <ContactSection />
       </main>
     </>
