@@ -130,7 +130,14 @@ button { font: inherit; }
   font-size: 16px;
 }
 
+
+.story-card {
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
 .story-card p {
-  margin-bottom: 16px;
-  color: #cfcfcf;
+  margin-bottom: 18px;
 }

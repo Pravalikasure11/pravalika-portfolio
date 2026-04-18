@@ -512,6 +512,7 @@ function EducationSection() {
   );
 }
 
+
 function StorySection() {
   return (
     <section className="section-shell bordered">
