@@ -523,10 +523,8 @@ function StorySection() {
           subtitle="A real-world business problem that shaped how I think about data, systems, and decision-making."
         />
 
-        <div className="story-layout">
-
-          {/* LEFT - TEXT */}
-          <div className="story-text card premium">
+        <div className="story-shell card premium">
+          <div className="story-copy">
             <p>
               My curiosity about data started at home, through my father’s logistics business in India.
               Like many small and medium businesses, operations depended heavily on Excel sheets,
@@ -563,14 +561,13 @@ function StorySection() {
             </p>
           </div>
 
-          {/* RIGHT - IMAGE */}
-          <div className="story-image">
+          <div className="story-visual">
             <img
-              src={ASSET_BASE + 'pravalika-sun.jpg'}
+              src={ASSET_BASE + 'pravalika-story.jpg'}
               alt="Pravalika"
+              className="story-photo"
             />
           </div>
-
         </div>
       </div>
     </section>
