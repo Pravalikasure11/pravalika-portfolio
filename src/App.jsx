@@ -83,19 +83,20 @@ const otherProjects = [
     repo: 'https://github.com/Pravalikasure11',
   },
   {
-    title: 'Inventory Risk & Optimization Analytics',
-    description:
-      'Designed KPI-driven analytics for margin tracking, inventory performance, and revenue visibility across multi-SKU business scenarios.',
-    skills: ['Python', 'SQL', 'Power BI', 'DAX', 'KPI Design', 'Margin Analysis', 'Inventory Analytics'],
-    repo: 'https://github.com/Pravalikasure11',
-  },
-  {
     title: 'Public Health Guidance Copilot',
     description:
-      'Conceptualized a deterministic retrieval-and-response assistant for structured public-health guidance and grounded evidence delivery.',
+      'Built a retrieval-based decision support assistant designed to provide grounded, structured responses using curated public-health sources and controlled prompting.',
     skills: ['Python', 'RAG', 'Prompt Design', 'Streamlit', 'Decision Support'],
-    repo: 'https://github.com/Pravalikasure11',
+    repo: 'https://github.com/Pravalikasure11/public-health-rag-copilot',
   },
+  {
+    title: 'Inventory Risk & Optimization Analytics',
+    description:
+      'Designed KPI-driven dashboards to track stock performance, margin trends, sales visibility, and operational insights across inventory workflows.',
+    skills: ['Power BI', 'DAX', 'Inventory Analytics', 'Margin Analysis', 'Business Reporting'],
+    repo: 'https://github.com/Pravalikasure11/inventory-dashboard-powerbi',
+  },
+
 ];
 
 const strengthCards = [
@@ -214,7 +215,7 @@ function Hero() {
   return (
     <section id="top" className="hero-section section-shell first-shell">
       <div className="hero-glow" />
-      <div className="container hero-grid refined">
+      <div className="container hero-grid refined hero-grid-updated">
         <div className="hero-copy">
           <span className="eyebrow-pill">Business, analytics, product, and polished execution</span>
           <h1>I build polished analytics products that help businesses make smarter, faster, more confident decisions.</h1>
@@ -242,16 +243,29 @@ function Hero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="hero-portrait-only"
+          className="hero-right-stack"
         >
           <div className="portrait-card card refined-portrait">
             <img src={ASSET_BASE + 'pravalika-sun.jpg'} alt="Pravalika portrait" className="hero-photo refined-photo" />
+          </div>
+
+          <div className="strength-grid hero-strength-grid">
+            {strengthCards.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.title} className="card strength-card compact-strength-card">
+                  <Icon size={18} />
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              );
+            })}
           </div>
         </motion.div>
       </div>
     </section>
   );
-}
+}  
 
 function AboutSection() {
   return (
@@ -293,58 +307,64 @@ function AboutSection() {
 }
 
 function FeaturedProject() {
-  const [active, setActive] = useState(projectScreens[0]);
-
   return (
     <section id="featured-project" className="section-shell bordered">
       <div className="container">
-        <SectionHeading eyebrow="Featured Project" title={featuredProject.title} subtitle={featuredProject.subtitle} />
-        <div className="feature-grid premium-gap">
-          <div className="feature-media">
-            <div className="main-shot-wrap card">
-              <img src={active.src} alt={active.alt} className="main-shot" />
+        <SectionHeading
+          eyebrow="Featured Project"
+          title={featuredProject.title}
+          subtitle={featuredProject.subtitle}
+        />
+
+        <div className="feature-simple card premium">
+          <div className="feature-video-wrap">
+            <div className="feature-video-shell">
+              <video className="feature-video" controls playsInline preload="metadata">
+                <source src={ASSET_BASE + 'liquor-demo.mov'} type="video/quicktime" />
+                Your browser does not support the video tag.
+              </video>
             </div>
-            <div className="thumb-grid expanded">
-              {projectScreens.map((shot) => (
-                <button
-                  type="button"
-                  key={shot.src}
-                  className={shot.src === active.src ? 'thumb-card active' : 'thumb-card'}
-                  onClick={() => setActive(shot)}
-                >
-                  <img src={shot.src} alt={shot.alt} />
-                </button>
-              ))}
-            </div>
+            <p className="video-note">Live demo walkthrough of the platform interface and workflows.</p>
           </div>
 
-          <div className="feature-copy card">
-            <span className="pill gold">Deployed • Business-focused • Full-stack</span>
+          <div className="feature-content">
+            <span className="pill gold">Live demo • Business-focused • Full-stack</span>
             <h3>{featuredProject.title}</h3>
-            <div className="stack-row">
+
+            <p className="subtle">
+              A full-stack retail analytics system built to manage inventory, track revenue,
+              analyze profitability, and support real-time business decision-making.
+            </p>
+
+            <div className="stack-row compact">
               {featuredProject.stack.map((item) => (
                 <span key={item} className="chip gold-chip">{item}</span>
               ))}
             </div>
-            <ul className="bullet-list">
+
+            <ul className="bullet-list compact-bullets">
               {featuredProject.bullets.map((bullet) => (
                 <li key={bullet}>{bullet}</li>
               ))}
             </ul>
-            <div className="skill-block">
-              <div className="small-heading">Skills Used</div>
-              <div className="stack-row compact">
-                {featuredProject.skills.map((skill) => (
-                  <span key={skill} className="chip">{skill}</span>
-                ))}
-              </div>
-            </div>
-            <div className="button-row left wrap">
-              <a className="btn btn-primary" href="#" onClick={(e) => e.preventDefault()}>
-                Live Demo (add later) <ExternalLink size={16} />
+
+            <div className="button-row left wrap top-gap-sm">
+              <a
+                className="btn btn-primary"
+                href={ASSET_BASE + 'liquor-demo.mov'}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Live Demo <ExternalLink size={16} />
               </a>
-              <a className="btn btn-secondary" href={links.github} target="_blank" rel="noreferrer">
-                GitHub Profile <Github size={16} />
+
+              <a
+                className="btn btn-secondary"
+                href="https://github.com/Pravalikasure11/liquor-retail-analytics-platform"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub Repo <Github size={16} />
               </a>
             </div>
           </div>
@@ -598,14 +618,13 @@ export default function App() {
       <Nav />
       <main className="app-shell">
         <Hero />
-        <AboutSection />
         <FeaturedProject />
         <ProjectsSection />
         <SkillsSection />
         <CertificationsSection />
         <AchievementsSection />
         <EducationSection />
-        <StorySection />  
+        <StorySection />
         <ContactSection />
       </main>
     </>
