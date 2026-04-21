@@ -320,7 +320,14 @@ function FeaturedProject() {
           <div className="feature-video-wrap">
             <div className="feature-video-shell">
               <video className="feature-video" controls playsInline preload="metadata">
-                <source src={ASSET_BASE + 'liquor-demo.mov'} type="video/quicktime" />
+                <a
+  className="btn btn-primary"
+  href="https://drive.google.com/file/d/1a8KnDViryYO7keytWfRCf9eI879eATCv/view?t=85.853"
+  target="_blank"
+  rel="noreferrer"
+>
+  Live Demo <ExternalLink size={16} />
+</a>
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -351,7 +358,7 @@ function FeaturedProject() {
             <div className="button-row left wrap top-gap-sm">
               <a
                 className="btn btn-primary"
-                href={ASSET_BASE + 'liquor-demo.mov'}
+                href={ASSET_BASE + 'lhttps://drive.google.com/file/d/1a8KnDViryYO7keytWfRCf9eI879eATCv/view?usp=drive_link'}
                 target="_blank"
                 rel="noreferrer"
               >
