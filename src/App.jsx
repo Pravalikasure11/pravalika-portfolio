@@ -305,7 +305,6 @@ function AboutSection() {
     </section>
   );
 }
-
 function FeaturedProject() {
   return (
     <section id="featured-project" className="section-shell bordered">
@@ -319,19 +318,16 @@ function FeaturedProject() {
         <div className="feature-simple card premium">
           <div className="feature-video-wrap">
             <div className="feature-video-shell">
-              <video className="feature-video" controls playsInline preload="metadata">
-                <a
-  className="btn btn-primary"
-  href="https://drive.google.com/file/d/1a8KnDViryYO7keytWfRCf9eI879eATCv/view?t=85.853"
-  target="_blank"
-  rel="noreferrer"
->
-  Live Demo <ExternalLink size={16} />
-</a>
-                Your browser does not support the video tag.
-              </video>
+              <iframe
+                className="feature-video"
+                src="https://drive.google.com/file/d/1a8KnDViryYO7keytWfRCf9eI879eATCv/preview"
+                title="Liquor Retail Analytics Platform Demo"
+                allow="autoplay"
+              />
             </div>
-            <p className="video-note">Live demo walkthrough of the platform interface and workflows.</p>
+            <p className="video-note">
+              Live demo walkthrough of the platform interface and workflows.
+            </p>
           </div>
 
           <div className="feature-content">
@@ -358,7 +354,7 @@ function FeaturedProject() {
             <div className="button-row left wrap top-gap-sm">
               <a
                 className="btn btn-primary"
-                href={ASSET_BASE + 'lhttps://drive.google.com/file/d/1a8KnDViryYO7keytWfRCf9eI879eATCv/view?usp=drive_link'}
+                href="https://drive.google.com/file/d/1a8KnDViryYO7keytWfRCf9eI879eATCv/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -367,7 +363,7 @@ function FeaturedProject() {
 
               <a
                 className="btn btn-secondary"
-                href="https://github.com/Pravalikasure11/liquor-retail-analytics-platform"
+                href="https://drive.google.com/file/d/1a8KnDViryYO7keytWfRCf9eI879eATCv/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -379,7 +375,7 @@ function FeaturedProject() {
       </div>
     </section>
   );
-}
+} 
 
 function ProjectsSection() {
   return (
